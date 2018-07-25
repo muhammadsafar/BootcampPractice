@@ -40,14 +40,14 @@ public class Main extends javax.swing.JFrame {
         TESTDEKTOP.setLayout(TESTDEKTOPLayout);
         TESTDEKTOPLayout.setHorizontalGroup(
             TESTDEKTOPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGap(0, 380, Short.MAX_VALUE)
         );
         TESTDEKTOPLayout.setVerticalGroup(
             TESTDEKTOPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 268, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Check");
+        jMenu1.setText("Operasi");
 
         prii.setText("Prima");
         prii.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +67,12 @@ public class Main extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Help");
+        jMenu2.setText("Exit");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -78,11 +83,14 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TESTDEKTOP))
+                .addComponent(TESTDEKTOP)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TESTDEKTOP)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(TESTDEKTOP)
+                .addContainerGap())
         );
 
         pack();
@@ -90,9 +98,9 @@ public class Main extends javax.swing.JFrame {
 
     private void priiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priiActionPerformed
     
-        Prima ope = new Prima();
-        ope.show();
-        TESTDEKTOP.add(ope);
+        Prima operasi = new Prima();
+        operasi.show();
+        TESTDEKTOP.add(operasi);
         
     }//GEN-LAST:event_priiActionPerformed
 
@@ -103,6 +111,11 @@ public class Main extends javax.swing.JFrame {
         fb.show();
         TESTDEKTOP.add(fb);
     }//GEN-LAST:event_fiiboActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
