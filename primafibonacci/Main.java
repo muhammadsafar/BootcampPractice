@@ -18,14 +18,10 @@ public class Main {
           //ini fungsi prima
           Execute ambilPrima = new Execute();
           System.out.println(ambilPrima.primaaa(41));
-          
-          
+                    
           //ini fungsi fibo
           Execute lihatFibo = new Execute();
           System.out.print(lihatFibo.Fibo(2, 6, 114));
-          
-          System.out.println(lihatFibo.penjumlahan(3, 4));
-          System.out.println(lihatFibo.faktorial(12));
    
     }
 }
